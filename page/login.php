@@ -1,3 +1,4 @@
+
 <?php
 include "config/config.php";
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -19,11 +20,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             echo "<meta http-equiv='refresh' content='1 url=index.php'>";
         }
     }
-}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -31,6 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <title>Riversky</title>
     <link rel="stylesheet" href="/Riversky/assets/css/style2.css">
 </head>
+
 <body class="sub_page">
     <div class="container">
         <div class="box">
@@ -59,4 +61,5 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         </div>
     </div>
 </body>
+
 </html>
