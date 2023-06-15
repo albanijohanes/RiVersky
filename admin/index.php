@@ -226,9 +226,17 @@
           </li>
           <li class="nav-item">
             <a href="mahasiswa.php" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-plus"></i>
               <p>
                 Daftar Mahasiswa
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="tabel_mahasiswa.php" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Tabel Mahasiswa
               </p>
             </a>
           </li>
