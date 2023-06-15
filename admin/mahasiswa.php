@@ -22,6 +22,7 @@ if (isset($_POST['nama_mahasiswa']) && isset($_POST['nim']) && isset($_POST['tan
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -261,6 +262,7 @@ if (isset($_POST['nama_mahasiswa']) && isset($_POST['nim']) && isset($_POST['tan
                             <i class="nav-icon fas fa-table"></i>
                             <p>
                                 Tabel Mahasiswa
+
                             </p>
                         </a>
                     </li>
@@ -315,12 +317,34 @@ if (isset($_POST['nama_mahasiswa']) && isset($_POST['nim']) && isset($_POST['tan
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin_laki" value="Laki-laki">
                                     <label class="form-check-label" for="jenis_kelamin_laki">
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="nim" class="form-label">Nomor Induk Mahasiswa</label>
+                                <input type="text" class="form-control" id="nim">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama mahasiswa</label>
+                                <input type="text" class="form-control" id="nama_mahasiswa">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tgllahir" class="form-label">Tanggal lahir</label>
+                                <input type="date" class="form-control" id="tanggal_lahir">
+                            </div>
+                            <div class="mb-3">
+                                    <h6 class="text-bold">Jenis kelamin</h6>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="jenis_kelamin">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+
                                         Laki-laki
                                     </label>
                                 </div>
                                 <div class="form-check">
+
                                     <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin_perempuan" value="Perempuan">
                                     <label class="form-check-label" for="jenis_kelamin_perempuan">
+
                                         Perempuan
                                     </label>
                                 </div>
