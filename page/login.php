@@ -17,6 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
         $login = mysqli_query($conn, "SELECT * FROM login WHERE username='$username' AND password='$password'");
 
+
         if (mysqli_num_rows($login) > 0) {
             $_SESSION['username'] = $username;
             ob_end_clean();
@@ -66,7 +67,7 @@ ob_end_flush();
             </div>
             <div class="input-box">
                 <input type="submit" class="input-submit" value="Login">
-            </div>
+              </div>
         </div>
     </div>
 </body>
