@@ -5,8 +5,14 @@ if (isset($_POST['submit'])) {
     $judul_berita = $_POST['judul_berita'];
     $deskripsi_berita = $_POST['deskripsi_berita'];
 
+<<<<<<< HEAD
     $query = "INSERT INTO riversky (judul_berita, deskripsi_berita) VALUES ('$judul_berita', '$deskripsi_berita')";
     if (mysqli_query($conn, $query)) {
+=======
+    $query = "INSERT INTO berita (judul_berita, deskripsi_berita) VALUES ('$judul_berita', '$deskripsi_berita')";
+    if (mysqli_query($conn, $query)) 
+    {
+>>>>>>> e4a09f12fb58f9c462d5da1e9022b7d94cde177d
         header('Location: index.php?admin=berita');
         exit();
     } else {
