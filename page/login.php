@@ -1,9 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> f77daf5bec4f2ac3d794aa720edc37ead30ef4ef
-ob_start();
 include "config/config.php";
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -20,14 +15,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         exit();
     } else {
         $login = mysqli_query($conn, "SELECT * FROM login WHERE username='$username' AND password='$password'");
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f77daf5bec4f2ac3d794aa720edc37ead30ef4ef
         if (mysqli_num_rows($login) > 0) {
             $_SESSION['username'] = $username;
-            ob_end_clean();
             //header("Location: admin/index.php");
             echo "<script>window.location.href='admin/index.php'</script>";
             //exit();
@@ -38,14 +27,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         }
     }
 }
-ob_end_flush();
 ?>
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f77daf5bec4f2ac3d794aa720edc37ead30ef4ef
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,11 +60,8 @@ ob_end_flush();
             </div>
             <div class="input-box">
                 <input type="submit" class="input-submit" value="Login">
-<<<<<<< HEAD
             </div>
-=======
-              </div>
->>>>>>> f77daf5bec4f2ac3d794aa720edc37ead30ef4ef
+
         </div>
     </div>
 </body>
