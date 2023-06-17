@@ -1,25 +1,53 @@
 <?php
 include('config.php');
 
-if(isset($_POST['submit'])){
-    
-    $query = mysqli_query($conn, "INSERT INTO pencapaian(judul_pencapaian, deskripsi_pencapaian, tanggal_pencapaian)
-                                  VALUES ('$_POST[judul_pencapaian]',
-                                          '$_POST[deskripsi_pencapaian]',
-                                          '$_POST[tglpencapaian]')");
+if (isset($_POST['submit'])) {
+    $judul_pencapain = $_POST['judul_pencapain'];
+    $deskripsi_pencapain = $_POST['deskripsi_pencapain'];
+    $tanggal_pencapain = $_POST['tanggal_pencapain'];
 
-    if($query){
-        echo "<script>
-                alert('Simpan data sukses!');
-                document.location='berita.php';
-              </script>";
-    }else{
-        echo "<script>
-                alert('Simpan data gagal!');
-                document.location='berita.php'
-              </script>";
-    }
+    $query = "INSERT INTO pencapaian (judul_pencapaian, deskripsi_pencapaian, tanggal_pencapaian)
+                VALUES ('$judul_pencapaian', '$deskripsi_pencapain', '$tanggal_pencapain')";
+                 if($query){
+                        echo "<script>
+                                alert('Simpan data sukses!');
+                                document.location='berita.php';
+                              </script>";
+                    }else{
+                        echo "<script>
+                                alert('Simpan data gagal!');
+                                document.location='berita.php'
+                              </script>";
+                    }
 
+    // $query = mysqli_query($conn, "INSERT INTO pencapaian (judul_pencapaian, deskripsi_pencapaian, tanggal_pencapaian)
+    //                               VALUES ('$_POST[judul_pencapaian]',
+    //                                       '$_POST[deskripsi_pencapaian]',
+    //                                       '$_POST[tanggal_pencapaian]')");
+
+    // if($query){
+    //     echo "<script>
+    //             alert('Simpan data sukses!');
+    //             document.location='berita.php';
+    //           </script>";
+    // }else{
+    //     echo "<script>
+    //             alert('Simpan data gagal!');
+    //             document.location='berita.php'
+    //           </script>";
+    // }
+
+    // $judul_berita = $_POST['judul_berita'];
+    // $deskripsi_berita = $_POST['deskripsi_berita'];
+
+    // $query = "INSERT INTO berita (judul_berita, deskripsi_berita) VALUES ('$judul_berita', '$deskripsi_berita')";
+    // if (mysqli_query($conn, $query)) 
+    // {
+    //     header('Location: index.php?admin=berita');
+    //     exit();
+    // } else {
+    //     echo "Data tidak bisa ditampilkan" . mysqli_error($conn);
+    // }
 
 }
 
@@ -78,16 +106,16 @@ if(isset($_POST['submit'])){
                     <div class="col-lg-12 position-static">
                         <form action="" method="post">
                             <div class="mb-3">
-                                <label for="judulpencapaian" class="form-label">Judul pencapaian</label>
-                                <input type="text" class="form-control" id="judul_pencapaian">
+                                <label for="judul_pencapaian" class="form-label">Judul pencapaian</label>
+                                <input type="text" class="form-control" id="judul_pencapaian" name="judul_pencapaian">
                             </div>
                             <div class="mb-3">
-                                <label for="deskpencapaian" class="form-label">Deskripsi pencapaian</label>
-                                <input type="text" class="form-control" id="deskripsi_pencapaian">
+                                <label for="deskripsi_pencapaian" class="form-label">Deskripsi pencapaian</label>
+                                <input type="text" class="form-control" id="deskripsi_pencapaian" name="deskripsi_pencapaian">
                             </div>
                             <div class="mb-3">
-                                <label for="tglpencapaian" class="form-label">Tanggal pencapaian</label>
-                                <input type="date" class="form-control" id="tanggal_pencapaian">
+                                <label for="tanggal_pencapaian" class="form-label">Tanggal pencapaian</label>
+                                <input type="date" class="form-control" id="tanggal_pencapaian" name="tanggal_pencapaian">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
